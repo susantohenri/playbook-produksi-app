@@ -1,6 +1,6 @@
-PLAYBOOK
+# PLAYBOOK
 
-# ASO-FIRST
+## ASO-FIRST
 ANDROID APP GROWTH
 
 Workflow operasional dari kepala kosong sampai aplikasi tumbuh lewat Google Play
@@ -12,61 +12,39 @@ Asumsi kerja: aplikasi Android non-game, developer indie, biaya riset dan optima
 
 Dokumen ini adalah SOP kerja, bukan klaim formula ranking Google. Faktor resmi, fitur Play Console, dan kebijakan dirujuk ke dokumentasi Google. Skor, ambang keputusan, serta urutan eksperimen adalah aturan operasional yang disarankan dan harus dievaluasi dengan data aplikasi sendiri.
 
-# Cara memakai playbook
+## Cara memakai playbook
 
 Ikuti urutan tahap. Setiap tahap punya checklist, output, dan gate. Jangan lompat ke coding sebelum gate validasi lolos. Setelah aplikasi live, jalankan siklus data → diagnosis → perubahan → evaluasi.
 
 | Prinsip | Aturan kerja |
-
 | --- | --- |
-
 | Checklist wajib | Centang setelah benar-benar dilakukan. Simpan bukti/link/screenshot bila keputusan penting. |
-
 | Gate | Lanjut hanya bila output minimum tersedia. Jika belum, revisi atau hentikan kandidat. |
-
 | Skip dengan alasan | Aktivitas opsional boleh dilewati hanya jika kriteria skip terpenuhi dan alasannya dicatat. |
-
 | Satu eksperimen = satu hipotesis | Jangan mengubah title, icon, screenshots, negara, dan fitur sekaligus lalu mengklaim tahu penyebab hasil. |
-
 | Data Play Console mengalahkan tebakan | Riset eksternal dipakai untuk memulai; query, negara, bahasa, konversi, dan kualitas aktual menentukan iterasi. |
-
 | No ranking guarantee | Google tidak menerbitkan bobot formula ranking Search yang bisa dioptimalkan secara pasti. Jangan perlakukan skor tool sebagai faktor ranking resmi. |
 
 ## Peta perjalanan
 
 | Tahap | Pekerjaan | Output wajib |
-
 | --- | --- | --- |
-
 | 0. Brief | Tetapkan tujuan, audience, batasan | App opportunity brief |
-
 | 1. Discovery | Cari kebutuhan dan kandidat masalah | Backlog 10–20 masalah/ide |
-
 | 2. Keyword | Petakan search intent dan frasa | Keyword map per intent |
-
 | 3. SERP & kompetitor | Audit hasil Play Store dan kompetitor | SERP/competitor matrix |
-
 | 4. Decision | Nilai peluang dan pilih kandidat | GO / HOLD / KILL |
-
 | 5. Product plan | Turunkan intent menjadi MVP | PRD + feature-to-intent map |
-
 | 6. Build & quality | Bangun produk yang memenuhi intent | Build siap uji |
-
 | 7. Listing | Siapkan metadata dan aset | Listing pack lengkap |
-
 | 8. Market setup | Negara, bahasa, kategori, tags | Market/language matrix |
-
 | 9. Release | Policy, testing, rollout | Production release |
-
 | 10. Learn | Baca akuisisi, search terms, behavior | Baseline + diagnosis |
-
 | 11. Optimize | CSL, experiments, product iteration | Experiment log + backlog |
-
 | Penting:  ASO bukan keyword stuffing. Ini sistem menyelaraskan query pengguna, listing, fungsi aplikasi, dan pengalaman setelah install. |
-
 | --- |
 
-# Tahap 0 — Tetapkan operating brief
+## Tahap 0 — Tetapkan operating brief
 
 Isi sebelum mencari ide. Tujuannya supaya riset tidak melebar ke pasar, fitur, atau model bisnis yang tidak akan dieksekusi.
 
@@ -85,30 +63,19 @@ Isi sebelum mencari ide. Tujuannya supaya riset tidak melebar ke pasar, fitur, a
 ## Template brief
 
 | Field | Isi yang harus diputuskan |
-
 | --- | --- |
-
 | Audience | [Segmen + situasi penggunaan] |
-
 | Problem/job | [Tugas spesifik yang ingin diselesaikan] |
-
 | Primary market | [Negara + bahasa] |
-
 | Monetization | [AdMob / hybrid / lainnya] |
-
 | MVP timebox | [Estimasi jam/hari development] |
-
 | Hard constraints | [Offline/backend/API/content/policy] |
-
 | Success condition | [Sinyal demand + kualitas + konversi yang ingin dibuktikan] |
-
 | GATE: BRIEF | JIKA BELUM LOLOS |
-
 | --- | --- |
-
 | Ada audience, job-to-be-done, pasar awal, monetisasi, dan batasan yang jelas. | Jangan lanjut. Revisi tahap ini atau hentikan kandidat. |
 
-# Tahap 1 — Discovery dari kepala kosong
+## Tahap 1 — Discovery dari kepala kosong
 
 Jangan brainstorming nama aplikasi dulu. Cari kebutuhan, task, dan ketidakpuasan yang sudah terlihat di ekosistem Play Store.
 
@@ -129,19 +96,12 @@ Jangan brainstorming nama aplikasi dulu. Cari kebutuhan, task, dan ketidakpuasan
 ## Sumber discovery gratis
 
 | Sumber | Gunakan untuk | Jangan disimpulkan |
-
 | --- | --- | --- |
-
 | Google Play Search/autocomplete | Bahasa/query yang dikenali Play dan alternatif yang disarankan | Bukan angka volume bulanan |
-
 | Google Play kategori/Top charts | Peta aplikasi yang sedang terlihat pada kategori/pasar | Bukan bukti otomatis ada celah |
-
 | Review Play Store | Pain points, requested features, ekspektasi pengguna | Satu review bukan pola pasar |
-
 | Google Trends | Tren relatif dan seasonality di Google Search | Bukan volume pencarian Play Store |
-
 | Keyword Planner | Ide keyword dan perkiraan pencarian Google Search | Bukan volume Play Search |
-
 | AppBrain/ASO tools freemium | Estimasi install/ranking/metadata kompetitor jika tersedia | Angka install pihak ketiga bukan angka pasti |
 
 ## Checklist discovery
@@ -157,31 +117,22 @@ Jangan brainstorming nama aplikasi dulu. Cari kebutuhan, task, dan ketidakpuasan
 ☐  Buang ide yang hanya menarik bagi developer tetapi tidak punya bukti problem atau search intent.
 
 | GATE: DISCOVERY | JIKA BELUM LOLOS |
-
 | --- | --- |
-
 | Backlog berisi masalah nyata, audience, contoh aplikasi pembanding, dan bukti awal. | Jangan lanjut. Revisi tahap ini atau hentikan kandidat. |
 
-# Tahap 2 — Keyword research dan intent map
+## Tahap 2 — Keyword research dan intent map
 
 Keyword research dilakukan per masalah/intent, bukan mengumpulkan ratusan frasa tanpa struktur. Satu aplikasi sebaiknya punya satu primary intent yang kuat dan beberapa secondary intents yang masih satu pekerjaan.
 
 ## 2.1 Bentuk seed keywords
 
 | Jenis seed | Pertanyaan | Contoh generik |
-
 | --- | --- | --- |
-
 | Task/action | Pengguna ingin melakukan apa? | hitung, cari, hafal, konversi, jadwalkan |
-
 | Outcome | Hasil apa yang dicari? | harga jual, jadwal, nilai, terjemahan |
-
 | Problem | Masalah apa yang ingin diatasi? | susah mengingat, salah hitung, lupa jadwal |
-
 | Object/content | Apa objek yang dipakai? | resep, doa, peta, dokumen, satuan |
-
 | Audience/context | Untuk siapa/dalam situasi apa? | pemula, siswa, UMKM, perjalanan |
-
 | Synonym/local wording | Apa istilah sehari-hari/istilah lokal? | sinonim, ejaan alternatif, bahasa lokal |
 
 ## 2.2 Kumpulkan keyword
@@ -201,13 +152,9 @@ Keyword research dilakukan per masalah/intent, bukan mengumpulkan ratusan frasa 
 ## 2.3 Skema keyword map
 
 | Cluster / intent | Primary query | Related phrases | Fitur yang memenuhi intent | Prioritas |
-
 | --- | --- | --- | --- | --- |
-
 | [Cluster A] | [1 frasa utama] | [3–10 variasi] | [Fitur inti] | P1/P2/P3 |
-
 | [Cluster B] | [1 frasa utama] | [3–10 variasi] | [Fitur pendukung] | P1/P2/P3 |
-
 | [Cluster C] | [1 frasa utama] | [3–10 variasi] | [Fitur pendukung] | P1/P2/P3 |
 
 ## 2.4 Prioritaskan keyword
@@ -223,16 +170,12 @@ Nilai internal 0–5, bukan metrik resmi Google: kejelasan intent, bukti autocom
 ☐  Catat kata yang ambigu, berisiko trademark, atau tidak bisa dipenuhi app; keluarkan dari target.
 
 | Batas data:  Google Play tidak menyediakan angka monthly search volume publik untuk semua keyword. Autocomplete, ranking, dan estimasi tool adalah proxy; setelah rilis, search terms yang terlihat di Play Console menjadi sumber bukti langsung yang lebih relevan. |
-
 | --- |
-
 | GATE: KEYWORD | JIKA BELUM LOLOS |
-
 | --- | --- |
-
 | Ada primary intent, cluster turunannya, pemetaan fitur, dan daftar query yang sengaja tidak ditargetkan. | Jangan lanjut. Revisi tahap ini atau hentikan kandidat. |
 
-# Tahap 3 — Audit SERP dan kompetitor Play Store
+## Tahap 3 — Audit SERP dan kompetitor Play Store
 
 Lakukan pencarian langsung di Google Play. Ini memeriksa kompetisi pada tempat pengguna benar-benar mencari, bukan hanya hasil Google Web.
 
@@ -255,13 +198,9 @@ Lakukan pencarian langsung di Google Play. Ini memeriksa kompetisi pada tempat p
 ## Competitor matrix
 
 | Keyword | App / package | Posisi observasi | Rating & reviews | Install estimate | Gap / bukti |
-
 | --- | --- | --- | --- | --- | --- |
-
 | [query] | [app A] | [posisi/tanggal/market] | [data] | [jika tersedia] | [review/fitur] |
-
 | [query] | [app B] | [posisi/tanggal/market] | [data] | [jika tersedia] | [review/fitur] |
-
 | [query] | [app C] | [posisi/tanggal/market] | [data] | [jika tersedia] | [review/fitur] |
 
 ## Checklist celah
@@ -277,67 +216,45 @@ Lakukan pencarian langsung di Google Play. Ini memeriksa kompetisi pada tempat p
 ☐  Apakah aplikasi dapat memberi pengalaman yang setidaknya sebanding dengan ekspektasi pengguna dari listing kompetitor?
 
 | GATE: SERP | JIKA BELUM LOLOS |
-
 | --- | --- |
-
 | Celah pasar teridentifikasi dan dibuktikan oleh fitur/review/UX, bukan asumsi. | Jangan lanjut. Revisi tahap ini atau hentikan kandidat. |
 
-# Tahap 4 — Pilih ide: GO / HOLD / KILL
+## Tahap 4 — Pilih ide: GO / HOLD / KILL
 
 Gunakan scoring berikut untuk membandingkan kandidat. Ini rubric internal; bukan standar Google dan bukan prediksi ranking.
 
 | Dimensi | Bobot | Skor 0–5 | Cara memberi nilai |
-
 | --- | --- | --- | --- |
-
 | Bukti demand / query | 25% | [ ] | Autocomplete, hasil Play yang relevan, tren stabil/naik, search terms kompetitor sebagai proxy. |
-
 | Kejelasan intent | 20% | [ ] | Pengguna jelas mencari satu tugas/hasil, bukan query kabur. |
-
 | Celah kompetitor | 20% | [ ] | Ada keluhan/fitur/kekurangan yang berulang dan dapat diperbaiki. |
-
 | Kemampuan diferensiasi | 15% | [ ] | Perbedaan nyata dapat dibangun dan ditunjukkan pada listing. |
-
 | Feasibility & maintenance | 10% | [ ] | MVP dapat dibangun tanpa data/API/beban maintenance yang tidak sanggup dipenuhi. |
-
 | Fit AdMob/usage | 10% | [ ] | Ada usage yang masuk akal tanpa memaksa pengguna atau merusak core task. |
 
 Hitung total = jumlah (skor/5 × bobot).
 
 | Keputusan | Aturan operasional |
-
 | --- | --- |
-
 | GO: 70–100 | Lanjut PRD jika tidak ada risiko fatal dan primary intent bisa dipenuhi. |
-
 | HOLD: 55–69 | Riset tambahan: cari query lebih spesifik, gap kompetitor, atau diferensiasi yang lebih jelas. |
-
 | KILL: di bawah 55 | Simpan catatan dan hentikan. Jangan menghabiskan waktu development. |
-
 | Veto regardless of score | Tidak feasible, melanggar policy, tidak punya hak atas konten/data, atau tidak bisa memberikan fungsi yang dijanjikan. |
-
 | Kill cepat:  Tidak ada bukti problem + intent lemah + top results sudah sangat memadai + tidak ada diferensiasi yang realistis = stop. Jangan menyelamatkan ide hanya karena sudah telanjur membuat desain. |
-
 | --- |
-
 | GATE: IDEA | JIKA BELUM LOLOS |
-
 | --- | --- |
-
 | Satu kandidat GO, skor dan bukti disimpan, serta alasan kandidat lain di-HOLD/KILL terdokumentasi. | Jangan lanjut. Revisi tahap ini atau hentikan kandidat. |
 
-# Tahap 5 — Turunkan keyword menjadi produk / MVP
+## Tahap 5 — Turunkan keyword menjadi produk / MVP
 
 Produk harus memenuhi intent yang dipakai untuk menarik pengguna. Jangan membuat listing menjanjikan fungsi yang baru berupa rencana.
 
 ## Feature-to-intent map
 
 | Search intent | Ekspektasi setelah install | Fungsi minimum | Bukti di listing |
-
 | --- | --- | --- | --- |
-
 | [primary query] | [hasil yang pengguna harapkan] | [fitur inti yang benar-benar bekerja] | [screenshot 1/2] |
-
 | [secondary query] | [hasil sekunder] | [fitur pendukung] | [screenshot 3/4] |
 
 ## Checklist product readiness
@@ -379,12 +296,10 @@ Produk harus memenuhi intent yang dipakai untuk menarik pengguna. Jangan membuat
 ☐  Release risks dan maintenance owner
 
 | GATE: MVP | JIKA BELUM LOLOS |
-
 | --- | --- |
-
 | Fitur inti bekerja, value proposition terbukti di produk, dan semua klaim listing dapat didemokan. | Jangan lanjut. Revisi tahap ini atau hentikan kandidat. |
 
-# Tahap 6 — Build, kompatibilitas, dan technical quality
+## Tahap 6 — Build, kompatibilitas, dan technical quality
 
 Quality adalah bagian dari acquisition strategy. Google menyatakan metrik Android Vitals tertentu memengaruhi discoverability; masalah pada model perangkat tertentu dapat mengarahkan pengguna model tersebut ke aplikasi lain.
 
@@ -407,51 +322,36 @@ Quality adalah bagian dari acquisition strategy. Google menyatakan metrik Androi
 ☐  Tinjau Device Catalog setelah bundle tersedia; pastikan model penting tidak ter-exclude tanpa alasan.
 
 | Target API 2026:  Kebijakan yang berlaku sejak 31 Agustus 2026 mensyaratkan API 36 untuk aplikasi baru dan update. API 35 adalah batas untuk aplikasi existing agar tetap tersedia bagi pengguna baru di perangkat Android yang lebih baru. Verifikasi ulang halaman kebijakan sebelum setiap submission. |
-
 | --- |
 
 ## Android Vitals watchlist
 
 | Metric | Ambang bad behavior keseluruhan | Tindakan |
-
 | --- | --- | --- |
-
 | User-perceived ANR rate | ≥ 0.47% DAU | Buka cluster ANR; prioritaskan cluster dengan banyak user terdampak. |
-
 | User-perceived crash rate | ≥ 1.09% daily users | Buka crash clusters dan lakukan perbaikan berurutan. |
-
 | Device-level bad behavior | ≥ 8% DAU untuk satu model | Analisis model, Android version, RAM/SoC, dan versi app. |
-
 | Battery / wake locks | Periksa sesuai jenis app dan status metrik | Untuk app biasa, jangan menambah background work tanpa alasan. |
 
 Google umumnya melihat 28 hari terakhir untuk evaluasi kualitas, tetapi dapat bertindak lebih cepat bila terjadi lonjakan. Baca breakdown artifact, Android version, form factor, dan device model.
 
 | GATE: TECH | JIKA BELUM LOLOS |
-
 | --- | --- |
-
 | Build sesuai API policy, release build lulus tes, deklarasi/permission tepat, dan tidak ada masalah kritis yang diketahui. | Jangan lanjut. Revisi tahap ini atau hentikan kandidat. |
 
-# Tahap 7 — Siapkan listing pack sebelum publish
+## Tahap 7 — Siapkan listing pack sebelum publish
 
 Jangan menulis listing dari nol pada hari rilis. Siapkan copy dan aset berdasarkan primary intent serta diferensiasi yang sudah lolos audit.
 
 ## 7.1 Metadata
 
 | Elemen | Batas / aturan | Checklist |
-
 | --- | --- | --- |
-
 | App name / title | Maks. 30 karakter | Nama jelas, unik, mengandung konteks utama secara natural, tidak misleading. |
-
 | Short description | Maks. 80 karakter | Satu kalimat manfaat terpenting; jangan menjejalkan keyword. |
-
 | Full description | Maks. 4.000 karakter | Paragraf awal menjelaskan fungsi; lanjutkan fitur, use case, cara pakai, batasan. |
-
 | Category | Satu kategori paling tepat | Pilih berdasar tujuan utama aplikasi. |
-
 | Tags | Maks. 5 | Pilih hanya tags yang jelas relevan dari listing atau pengalaman awal. |
-
 | Developer contact | Email dan detail yang valid | Support channel dipantau; privacy policy aktif. |
 
 ## 7.2 Susunan full description yang bisa dipakai
@@ -471,17 +371,11 @@ Jangan menulis listing dari nol pada hari rilis. Siapkan copy dan aset berdasark
 ## 7.3 Screenshot sequence
 
 | Slot | Tujuan | Isi |
-
 | --- | --- | --- |
-
 | 1 | Jawab “ini aplikasi apa dan apa hasilnya?” | Core value + layar hasil terbaik. |
-
 | 2 | Buktikan core flow | Langkah utama atau input → hasil. |
-
 | 3 | Diferensiasi | Fitur yang kompetitor kurang punya. |
-
 | 4 | Trust / depth | Offline, data, variasi, akurasi, atau fitur pendukung yang relevan. |
-
 | 5–8 | Objection handling | Use case tambahan yang sering muncul pada query/review. |
 
 Persyaratan aset utama saat ini: icon 512×512 PNG; feature graphic 1024×500; phone listing 2–8 screenshots. Untuk kelayakan beberapa format rekomendasi, Google merekomendasikan setidaknya empat screenshot 1080 px atau lebih (portrait 1080×1920, landscape 1920×1080). Ikuti ukuran/format yang ditampilkan Console karena persyaratan perangkat berbeda.
@@ -511,12 +405,10 @@ Persyaratan aset utama saat ini: icon 512×512 PNG; feature graphic 1024×500; p
 ☐  Aset menunjukkan fungsi yang benar dan aman untuk general audience.
 
 | GATE: LISTING | JIKA BELUM LOLOS |
-
 | --- | --- |
-
 | Title, short/full description, category/tags, icon, feature graphic, screenshots, translations awal, dan policy review siap. | Jangan lanjut. Revisi tahap ini atau hentikan kandidat. |
 
-# Tahap 8 — Negara, bahasa, dan distribusi
+## Tahap 8 — Negara, bahasa, dan distribusi
 
 Jangan menerjemahkan semua bahasa sekaligus. Pilih pasar yang didukung bukti keyword, competitor demand, bahasa produk, dan kemampuan support.
 
@@ -537,26 +429,17 @@ Jangan menerjemahkan semua bahasa sekaligus. Pilih pasar yang didukung bukti key
 ## Market-language matrix
 
 | Market | Language / locale | Evidence | Listing + screenshots | In-app localized? | Decision |
-
 | --- | --- | --- | --- | --- | --- |
-
 | [Country A] | [locale] | [query/competitors] | Yes/No | Yes/No | Launch/Test/Skip |
-
 | [Country B] | [locale] | [query/competitors] | Yes/No | Yes/No | Launch/Test/Skip |
-
 | [Country C] | [locale] | [query/competitors] | Yes/No | Yes/No | Launch/Test/Skip |
-
 | Waspada CSL vs translation:  Custom Store Listings tidak otomatis mendapat automated translation. Jika CSL ditargetkan ke pengguna dengan bahasa lain, tambahkan terjemahan CSL yang sesuai; jika tidak, listing dapat tampil dalam bahasa default CSL. |
-
 | --- |
-
 | GATE: MARKET | JIKA BELUM LOLOS |
-
 | --- | --- |
-
 | Negara distribusi, default language, prioritas terjemahan, dan batasan support diputuskan. | Jangan lanjut. Revisi tahap ini atau hentikan kandidat. |
 
-# Tahap 9 — Play Console setup, policy, dan release
+## Tahap 9 — Play Console setup, policy, dan release
 
 ## 9.1 App setup
 
@@ -601,137 +484,89 @@ Jangan menerjemahkan semua bahasa sekaligus. Pilih pasar yang didukung bukti key
 ☐  Setelah live, buka listing dari Play Store target market untuk memeriksa bahasa, aset, dan tombol install.
 
 | GATE: RELEASE | JIKA BELUM LOLOS |
-
 | --- | --- |
-
 | App live dan dapat diinstall pada negara/perangkat target; listing tampil benar; tidak ada policy blocker. | Jangan lanjut. Revisi tahap ini atau hentikan kandidat. |
 
-# Tahap 10 — Baseline dan sumber data Play Console
+## Tahap 10 — Baseline dan sumber data Play Console
 
 Begitu app live, berhenti menebak. Buat snapshot baseline. Simpan export atau screenshot dengan rentang tanggal dan filter yang sama agar bisa dibandingkan.
 
 ## Menu utama yang harus dikenal
 
 | Area Console | Fungsi dalam workflow | Kapan dibuka |
-
 | --- | --- | --- |
-
 | Grow users overview | Akuisisi pengguna/perangkat dan sumber traffic Play | Weekly |
-
 | Store performance → Conversion analysis | Visitors, unique clicks, CTR; filter source, listing, country, language, UTM, acquisition state | Weekly |
-
 | Search terms / search term breakdown | Query yang membawa visitor dan kandidat CSL | Weekly / saat data muncul |
-
 | Store listings | Default listing, translations, custom listings, experiments | Saat build/optimasi |
-
 | Ratings and reviews | Rating trend, review themes, reply | Weekly |
-
 | Android vitals | Crash, ANR, battery, compatibility, device breakdown | Weekly; segera jika alert |
-
 | Reach and devices → Device catalog | Supported/excluded device coverage | Saat launch dan saat ada issue |
-
 | Pre-launch report | Stability, compatibility, performance, accessibility test | Setiap bundle yang diuji |
 
 ## Perubahan metrik listing 2026 — wajib dipahami
 
 | Mulai Juni/Juli 2026:  Store listing performance berfokus pada unique clicks (intent) seperti klik Install, Open, atau Pre-register. Successful user acquisitions tetap dilihat di Grow users overview, Statistics, dan downloadable reports. Jangan menyamakan unique install clicks dengan completed installs. |
-
 | --- |
-
 | Metrik | Artinya | Gunakan untuk |
-
 | --- | --- | --- |
-
 | Store listing visitors | Pengguna yang melihat listing sesuai definisi report | Ukuran kesempatan listing |
-
 | Unique user clicks | Pengguna unik yang klik Install/Open/Pre-register | Intent terhadap listing |
-
 | CTR | Clicks ÷ visitors (sesuai metric/report filter) | Mengevaluasi listing assets/copy |
-
 | User acquisitions | Pengguna baru yang acquired | Hasil acquisition |
-
 | Device acquisitions | Jumlah device install; bisa termasuk device tambahan | Jangan disamakan dengan jumlah orang |
-
 | Traffic source | Explore, Paid and direct, Pre-installs, Not attributed, dll. | Pisahkan organic Play dari sumber lain |
-
 | Search terms | Query Play yang terlapor membawa traffic | Keyword mining + CSL candidates |
 
 ## Baseline snapshot
 
 | Tanggal/range | Source | Country / language | Visitors | Clicks / CTR | Acquisitions | Notes |
-
 | --- | --- | --- | --- | --- | --- | --- |
-
 | [date range] | Google Play Search | [market/locale] | [ ] | [ ] | [ ] | [ ] |
-
 | [date range] | Google Play Explore | [market/locale] | [ ] | [ ] | [ ] | [ ] |
-
 | [date range] | Paid/direct/referral | [market/locale] | [ ] | [ ] | [ ] | [ ] |
 
 Catat juga: rating/rating count, installs/uninstalls, active users, core-action completion, retention, crash/ANR, dan top negative review themes. Pakai satu rentang waktu konsisten, misalnya 7/28 hari.
 
-# Tahap 11 — Post-launch diagnosis dan action rules
+## Tahap 11 — Post-launch diagnosis dan action rules
 
 Tentukan bottleneck sebelum mengedit apa pun. Gunakan pohon keputusan berikut sebagai urutan diagnosis.
 
 | Gejala | Periksa dahulu | Tindakan pertama |
-
 | --- | --- | --- |
-
 | Search visitors sangat rendah | Primary query, country/language, availability, category, indexing/listing state, competition | Periksa relevansi title/short description, apakah query benar-benar ada di Play search; jangan langsung mengubah semua metadata. |
-
 | Search visitors ada, CTR rendah | CTR vs peer median/percentile, icon, title, short description, first screenshots, locale fit | Jalankan eksperimen listing yang paling mungkin memperjelas value. |
-
 | CTR sehat, acquisitions tidak sejalan | Bedakan clicks vs acquisitions; compatibility, install failure, returning users, report definition | Periksa Grow overview, Statistics, device compatibility, dan funnel. |
-
 | Install ada, uninstall cepat | Review, crash/ANR, permissions, onboarding, ad interruption, expectation mismatch | Perbaiki core experience dan listing honesty. |
-
 | Install ada, core action rendah | First session, tutorial, login, unclear CTA, empty state, performance | Perbaiki activation dan ukur lagi. |
-
 | Negara A bagus, negara B buruk | Language, query intent, country-level CTR, device reach, support/product fit | Localized listing/CSL jika cukup bukti; jangan terjemahkan membabi buta. |
-
 | Satu device model punya issue | Android Vitals breakdown + Device Catalog | Perbaiki kompatibilitas atau batasi hanya jika ada alasan teknis yang valid. |
 
 ## Jadwal pemeriksaan
 
 | Waktu | Pemeriksaan | Keputusan yang boleh dibuat |
-
 | --- | --- | --- |
-
 | Hari 0–3 | Live status, installability, policy, listing, crashes, major errors | Fix blocker saja; jangan buru-buru menyimpulkan ranking. |
-
 | Hari 4–7 | Traffic source, first search terms jika tersedia, review awal, vitals | Temukan error/intent mismatch; jangan membuat A/B test tanpa traffic cukup. |
-
 | Hari 8–14 | Visitors, clicks/CTR, country/language, competitor changes | Pilih satu bottleneck dan satu hipotesis. |
-
 | Hari 15–28 | Search terms, acquisition, activation/retention, reviews, vitals | Buat CSL/experiment hanya jika sample cukup. |
-
 | Setiap 28 hari | Bandingkan periode, peer benchmark, trend negara, review clusters | Keep / iterate / rollback / stop investing. |
-
 | Low-volume rule:  Kalau traffic belum cukup untuk membaca pola atau calculator eksperimen memproyeksikan durasi terlalu panjang, jangan memaksa A/B test. Pakai data kualitatif (SERP, review, usability), lakukan satu perubahan terkontrol, lalu tunggu data yang memadai. |
-
 | --- |
 
-# Tahap 12 — Custom Store Listings (CSL) playbook
+## Tahap 12 — Custom Store Listings (CSL) playbook
 
 CSL bukan halaman SEO tambahan dan tidak otomatis menaikkan ranking query. Fungsinya menyesuaikan listing bagi segmen pengguna yang ditargetkan. Google saat ini mengizinkan hingga 50 CSL per aplikasi.
 
 ## Prioritas penggunaan CSL
 
 | Urutan | Target | Gunakan saat | Skip saat |
-
 | --- | --- | --- | --- |
-
 | 1 | Search keywords | Search terms / traffic memberi bukti cluster query; setiap cluster punya pesan/screenshot berbeda. | Belum ada traffic atau semua query punya intent yang sama. |
-
 | 2 | Country/region | Negara berbeda membutuhkan value proposition, konten, atau visual lokal. | Perbedaan hanya bendera/terjemahan literal; belum ada data market. |
-
 | 3 | Custom URL | Ada sumber traffic milik sendiri yang memang butuh landing message khusus. | Tidak ada channel/link destination yang relevan. |
-
 | 4 | Lapsed/churned users | Ada fitur/update baru yang nyata untuk mengajak kembali. | App tidak punya update/reason-to-return. |
-
 | 5 | Custom audiences / buyers | App punya audience signals dan use case bisnis/purchase yang nyata. | App sederhana, tidak ada segmentasi atau data cukup. |
-
 | 6 | Pre-registration / ads traffic | Ada preregistration atau kampanye aktif dan memang perlu message berbeda. | Tidak menggunakan pre-reg/Google Ads. |
 
 ## Prosedur CSL berdasarkan Search Keywords
@@ -767,27 +602,20 @@ CSL bukan halaman SEO tambahan dan tidak otomatis menaikkan ranking query. Fungs
 ☐  Bahasa CSL dipastikan; jangan mengandalkan automated translation untuk CSL.
 
 | Start small:  Mulai dari 1–3 CSL yang paling kuat, bukan membuat puluhan listing sekaligus. Gunakan 50-slot limit sebagai kapasitas, bukan target yang harus dihabiskan. |
-
 | --- |
 
-# Tahap 13 — Store Listing Experiments
+## Tahap 13 — Store Listing Experiments
 
 Gunakan eksperimen saat ada traffic yang memadai. Play Console punya satu default graphics experiment per app dan hingga lima localized experiments bersamaan. Default graphics menguji icon, feature graphic, dan screenshots; localized experiments juga dapat menguji teks/deskripsi pada bahasa terkait.
 
 ## Urutan eksperimen yang disarankan
 
 | Urutan | Asset | Hipotesis contoh | Metric/segment |
-
 | --- | --- | --- | --- |
-
 | 1 | Icon | Icon lebih mudah dikenali di hasil search/category | Unique install clicks; listing default |
-
 | 2 | Screenshot pertama | Benefit utama lebih jelas sebelum scroll | Unique install clicks; query/country |
-
 | 3 | Screenshot 2–4 | Use case utama lebih meyakinkan | Unique install clicks |
-
 | 4 | Short description / localized copy | Pesan lebih sesuai intent/bahasa | Localized experiment |
-
 | 5 | Feature graphic / video | Visual lebih cepat menjelaskan fungsi | Default/localized sesuai availability |
 
 ## Prosedur
@@ -809,14 +637,11 @@ Gunakan eksperimen saat ada traffic yang memadai. Play Console punya satu defaul
 ## Experiment log
 
 | ID / date | Hypothesis | Control vs variant | Audience / language | Result | Decision / next test |
-
 | --- | --- | --- | --- | --- | --- |
-
 | [E-01] | [why variant should win] | [asset A vs B] | [segment] | [result] | Keep / revert / retest |
-
 | [E-02] | [hypothesis] | [A vs B] | [segment] | [result] | [decision] |
 
-# Tahap 14 — Review, retention, vitals, dan device coverage
+## Tahap 14 — Review, retention, vitals, dan device coverage
 
 ## Ratings & reviews
 
@@ -854,40 +679,25 @@ Google menyebut DAU/MAU sebagai salah satu metrik yang digunakan untuk menilai c
 
 ☐  Jangan mengecualikan model hanya karena murah/lambat. Lakukan hanya jika ada alasan teknis teruji dan hitung konsekuensi reach.
 
-# Tahap 15 — Fitur Google Play: pakai / skip dengan sengaja
+## Tahap 15 — Fitur Google Play: pakai / skip dengan sengaja
 
 Tidak semua fitur harus digunakan pada semua aplikasi. Tabel ini mencegah waktu habis untuk fitur yang tidak tersedia atau tidak relevan.
 
 | Fitur | Status / manfaat | Keputusan default |
-
 | --- | --- | --- |
-
 | Search terms + conversion analysis | Core; keyword/market/listing performance | WAJIB dipakai setelah data tersedia |
-
 | Store Listing Experiments | Gratis A/B test listing; perlu sample cukup | PAKAI saat traffic memadai |
-
 | Custom Store Listings | Hingga 50; keyword, country, URL, audience | PAKAI bertahap berdasarkan data |
-
 | Translations/localized assets | Menjangkau bahasa yang dipilih pengguna | PAKAI pada market tervalidasi |
-
 | Category + tags | Kategori + maksimal 5 tags relevan | WAJIB konfigurasi sekali; review bila produk berubah |
-
 | External marketing | Google dapat memakai aset untuk properti Google; ada setting opt-out | Review setting; bukan jaminan ranking |
-
 | Promotional Content | Untuk semua game dan app yang memenuhi eligibility Premium growth tools | SKIP kecuali akses tersedia dan ada event baru yang nyata |
-
 | Play Shorts | Program terbatas pada partner terpilih; dokumentasi menyebut ketersediaan awal US | SKIP kecuali menu/eligibility tersedia di Console |
-
 | Pre-registration | Membangun minat sebelum app tersedia | SKIP untuk MVP kecil tanpa alasan demand prelaunch |
-
 | Device-specific screenshots | Tablet/foldable/TV/Wear/Automotive/XR | PAKAI hanya jika UX benar-benar mendukung form factor |
-
 | Peer benchmarks | Membandingkan CTR/vitals/ratings dengan peer group bila data cukup | PAKAI saat benchmark muncul |
-
 | Pre-launch report | Automated crawl stabilitas/kompatibilitas/performa/aksesibilitas | PAKAI setiap bundle; review hasil |
-
 | Google Ads | Paid acquisition | DI LUAR scope ASO organik; hanya uji bila budget dan unit economics siap |
-
 | Backlinks/social/PR | External referrals | SEKUNDER; jangan jadi fokus utama workflow ini |
 
 ## Promotional Content — syarat keputusan
@@ -904,56 +714,34 @@ Tidak semua fitur harus digunakan pada semua aplikasi. Tabel ini mencegah waktu 
 
 Dokumentasi Play Console yang tersedia per 26 November 2026 menyebut akses program terbatas pada partner terpilih dan availability awal hanya di Amerika Serikat. Jangan menyusun workflow produksi konten Shorts untuk aplikasi sebelum menu dan eligibility benar-benar tersedia pada akunmu.
 
-# Tahap 16 — Skip rules: yang boleh sengaja tidak dikerjakan
+## Tahap 16 — Skip rules: yang boleh sengaja tidak dikerjakan
 
 | Aktivitas | Skip jika… | Jangan skip jika… |
-
 | --- | --- | --- |
-
 | Backlink campaign | Tidak ada bukti referral berkualitas atau waktu lebih bernilai untuk listing/product | Referral menjadi sumber acquisition terukur atau ada partnership relevan |
-
 | Social media content rutin | Tidak ada kapasitas dan tidak menghasilkan traffic berkualitas | Dipakai untuk validasi audience atau mengirim traffic yang bisa diukur |
-
 | Translate ke banyak bahasa sekaligus | Belum ada evidence market, produk belum dilokalkan, tidak bisa support | Ada search terms/visitor dari bahasa itu dan mampu memenuhi ekspektasi |
-
 | CSL per keyword | Query masih sepi atau intent-nya sama | Cluster terpisah punya traffic dan butuh message/visual berbeda |
-
 | A/B testing | Traffic terlalu rendah untuk hasil yang berguna | Calculator menunjukkan sample/durasi masuk akal |
-
 | Promo Content | Tidak memenuhi Premium growth eligibility atau tidak ada event baru | Console memberi akses dan ada event/update sungguhan |
-
 | Play Shorts | Tidak terpilih sebagai partner / market belum tersedia | Console menunjukkan akses dan target market didukung |
-
 | Video listing | Screenshot + UI demo sudah menjelaskan fungsi dan video tak memberi info tambahan | Produk kompleks, interaksi sulit terlihat dari screenshot |
-
 | Tablet/foldable/TV/Wear assets | App tidak mendukung UX form factor itu | Ada layout khusus dan pengguna target di perangkat tersebut |
-
 | Push notification/retention gimmick | Use case tidak berulang atau tidak ada manfaat bagi pengguna | Notifikasi menyelesaikan kebutuhan yang sah dan dapat dikontrol |
-
 | Pre-registration | MVP bisa dirilis cepat dan belum ada audience prelaunch | Produk butuh lead time, demand, atau kampanye peluncuran |
-
 | Paid traffic | Budget/monetization/retention belum tervalidasi | Ada budget eksperimen terpisah dan tracking yang benar |
-
 | Catat setiap skip:  Tulis fitur/aktivitas yang di-skip, alasan, tanggal, dan kondisi yang akan memicu evaluasi ulang. Dengan begitu “tidak relevan” menjadi keputusan yang dapat diaudit, bukan kelupaan. |
-
 | --- |
 
-# Tahap 17 — Operating cadence
+## Tahap 17 — Operating cadence
 
 | Cadence | Routine | Artefak yang disimpan |
-
 | --- | --- | --- |
-
 | Setiap hari (5–10 menit) | Check policy/release alerts dan vitals anomali jika sedang rollout | Issue log |
-
 | Mingguan | Grow overview, conversion analysis, search terms, reviews, vitals, country/language | Weekly ASO snapshot |
-
 | Dua mingguan | Pilih satu bottleneck, satu hipotesis, satu perubahan/experiment | Experiment backlog |
-
 | Bulanan / 28 hari | Bandingkan acquisition, CTR, country/language, reviews, quality, retention | Monthly decision memo |
-
 | Saat rilis fitur | Update listing only if user-facing value materially changed; re-evaluate tags if function/content significantly changed | Release + listing changelog |
-
 | Per market expansion | Re-check keywords, language, competitors, translation quality, support, distribution | Market launch checklist |
 
 ## Aturan urutan prioritas backlog
@@ -970,46 +758,30 @@ Dokumentasi Play Console yang tersedia per 26 November 2026 menyebut akses progr
 
 →  Fitur tambahan hanya setelah masalah utama di atas terkendali.
 
-# Template kerja yang bisa disalin
+## Template kerja yang bisa disalin
 
 ## A. Opportunity card
 
 | Field | Isi |
-
 | --- | --- |
-
 | Opportunity ID / date | [ ] |
-
 | Problem / audience | [ ] |
-
 | Primary job-to-be-done | [ ] |
-
 | Primary keyword / intent | [ ] |
-
 | Related keyword clusters | [ ] |
-
 | Demand evidence | [Play autocomplete / SERP / Trends / review] |
-
 | Competitor gap evidence | [App + review + feature gap] |
-
 | MVP differentiation | [ ] |
-
 | Monetization fit | [ ] |
-
 | Risks / policy / data rights | [ ] |
-
 | Score / decision | [ ] GO / HOLD / KILL |
 
 ## B. Keyword cluster worksheet
 
 | Cluster | Query | Market/locale | Evidence | Intent | Feature match | Priority |
-
 | --- | --- | --- | --- | --- | --- | --- |
-
 | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
-
 | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
-
 | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 
 ## C. Weekly ASO review
@@ -1033,14 +805,11 @@ Dokumentasi Play Console yang tersedia per 26 November 2026 menyebut akses progr
 ## D. Change log
 
 | Date | Area | Before | Change | Reason / hypothesis | Result | Decision |
-
 | --- | --- | --- | --- | --- | --- | --- |
-
 | [ ] | [listing/product/market] | [ ] | [ ] | [ ] | [ ] | [ ] |
-
 | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 
-# Sumber resmi dan referensi
+## Sumber resmi dan referensi
 
 Dokumentasi Google Play berubah dari waktu ke waktu. Gunakan halaman berikut sebagai rujukan saat mengerjakan tahap terkait; periksa lagi sebelum mengirim app/update, terutama bagian policy, target API, CSL, dan fitur program.
 
